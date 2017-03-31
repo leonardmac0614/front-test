@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>数据 | 环境问题</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    
+    <style>
+
+    .magictime {
+        -webkit-animation-duration: .5s;
+        -moz-animation-duration: .5s;
+        -o-animation-duration: .5s;
+        animation-duration: .5s;
+    }
+    
+    body {
+        font-family: OpenSans-Light, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: #30323c;
+        color: #fff;
+    }
+    
+    #header {
+        background-color: #252732;
+        padding: 30px 40px;
+        position: relative;
+        font-family: OpenSans-Light, PingFang SC, Hiragino Sans GB, Microsoft Yahei, Microsoft Jhenghei, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    #header #nav {
+        position: absolute;
+        right: 60px;
+        top: 27px;
+        font-size: 13px;
+    }
+    
+    #header #nav a {
+        text-decoration: none;
+        display: inline-block;
+        color: #888;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-right: 0px;
+        cursor: pointer;
+        transition: color .3s;
+        -o-transition: color .3s;
+        -ms-transition: color .3s;
+        -moz-transition: color .3s;
+        -webkit-transition: color .3s;
+    }
+    
+    #header #nav a.active,
+    #header #nav a:hover {
+        color: #eee;
+    }
+    
+    #header h1 {
+        color: #eee;
+        margin-bottom: 30px;
+        font-size: 20px;
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    #header p {
+        color: #eee;
+        font-size: 20px;
+        margin-right: 200px;
+        margin-left: 25px;
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    #footer {
+        text-align: center;
+        color: white;
+        background-color: #252732;
+        padding: 30px;
+        font-size: 15px;
+    }
+    
+    #footer p {
+        margin-bottom: 0;
+        color: #eee;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    #footer a {
+        text-decoration: none;
+        color: #999;
+        margin-left: 4px;
+        margin-right: 4px;
+        transition: color .3s;
+        -o-transition: color .3s;
+        -ms-transition: color .3s;
+        -moz-transition: color .3s;
+        -webkit-transition: color .3s;
+    }
+    
+    #footer p a:hover {
+        color: #fff;
+    }
+    
+    </style>
+
+<body>
+    <div id="header">
+        <h1>数据</h1>
+        <p>环境问题</p>
+        <div id="nav">
+            <a href="/picloud/" id="nav1">
+                空气
+            </a>
+            <a href="/picloud/water" id="nav2">
+                水质
+            </a>
+            <a href="/picloud/pollution" id="nav3">
+                溯源
+            </a>
+            <a href="/picloud/weather" id="nav4">
+                缓解
+            </a>
+        </div>
+    </div>
+    <div style="padding:50px 60px;">
+        <div id="main">
+            
+<h3 style="text-align:center;margin-bottom:0px;">一阵雨 让空气更 <span style="color:#d94e5d;">清新</span></h3>
+<div style="position:relative;height:40px;">
+    <div style="display:inline-block;position:absolute;top:0;left:4%;">
+        <p style="margin-left:57px;">降雨频率</p>
+        <div>
+            <span style="font-size:12px;margin-right:8px;">高</span>
+            <img src="/picloud/static/img/legend1.png" alt="" style="width:120px;height:20px;">
+            <span style="font-size:12px;margin-left:8px;">低</span>
+        </div>
+    </div>
+    <div id="clear">清除选择</div>
+    <div style="display:inline-block;position:absolute;top:0;right:4%;">
+        <p style="margin-left:54px;">空气质量</p>
+        <div>
+            <span style="font-size:12px;margin-right:8px;">优</span>
+            <img src="/picloud/static/img/legend2.png" alt="" style="width:120px;height:20px;">
+            <span style="font-size:12px;margin-left:8px;">差</span>
+        </div>
+    </div>
+</div>
+<div id="plot1">
+    <img src="/picloud/static/img/shandong.png" alt="" id="img1">
+    <img src="/picloud/static/img/shandong1.png" alt="" id="img2">
+    <img src="/picloud/static/img/jiangsu.png" alt="" id="img3">
+    <img src="/picloud/static/img/jiangsu1.png" alt="" id="img4">
+    <svg width="980" height="660">
+        <g></g>
+    </svg>
+    <div id="legend3">
+        <span style="width:40px;height:12px;background-color:rgba(80, 163, 186, 0.8);display:inline-block;margin-right:8px;border-radius:2px;"></span>
+        <span style="font-size:12px;color:#999;">降雨量</span>
+        <span style="width:40px;height:12px;background-color:rgba(217, 78, 93, 0.8);display:inline-block;margin-left:20px;margin-right:8px;border-radius:2px;"></span>
+        <span style="font-size:12px;color:#999;">空气质量</span>
+    </div>
+    <div id="plot11"></div>
+</div>
+<div id="plot2">
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+            <div style="height:400px;position:relative;">
+                <h3 style="text-align:center;margin-bottom:40px;padding-top:10px;margin-top:0;">再来 更多更多的 <span style="color:#d94e5d;">雨</span></h3>
+                <div id="plot21">
+                    <p style="font-size:12px;color:#999;text-align:center;">将<span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">193</span>个 气象监测站</p>
+                    <p style="font-size:12px;color:#999;text-align:center;">和附近的 空气监测站 <span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">进行匹配</span></p>
+                    <p style="font-size:12px;color:#999;text-align:center;margin-top:35px;"><span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">847</span>对 站点匹配 <span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">2696</span>次 降雨匹配 中</p>
+                    <p style="font-size:12px;color:#999;text-align:center;margin-top:35px;">降雨 共改善了 空气质量</p>
+                    <p style="font-size:12px;color:#999;text-align:center;"><span style="margin-right:10px;"><span style="font-size:24px;color:#d94e5d;margin-left:5px;margin-right:5px;">2000</span>次</span>占<span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">74.18%</span></p>
+                    <p style="font-size:12px;color:#999;text-align:center;margin-top:35px;">平均降低 AQI 至</p>
+                    <p style="font-size:12px;color:#999;text-align:center;"><span style="font-size:24px;color:#d94e5d;margin-left:5px;margin-right:5px;">47.14%</span></p>
+                </div>
+                <!-- <div id="plot22">
+                </div> -->
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+            <div style="text-align:center;">
+                <embed src='http://player.youku.com/player.php/sid/XMTcwODcxMzE4OA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash' style="margin:0 auto;"></embed>
+            </div>
+        </div>
+    </div>
+</div>
+<h3 style="text-align:center;margin-bottom:0px;margin-top:80px;">一阵风 赶走不适的 <span style="color:#d94e5d;">雾霾</span></h3>  
+<div id="plot3">
+    <img src="/picloud/static/img/shandong.png" alt="" style="position:absolute;z-index:-999;left:40px;top:30px;height:250px;">
+    <img src="/picloud/static/img/jiangsu.png" alt="" style="position:absolute;z-index:-999;left:60px;bottom:30px;width:300px;">
+    <svg width="980" height="660">
+        <g></g>
+    </svg>
+    <div id="clear2">清除选择</div>
+    <div style="display:inline-block;position:absolute;top:160px;left:50%;margin-left:-44px;">
+        <p style="margin-left:57px;">平均风力</p>
+        <div>
+            <span style="font-size:12px;margin-right:8px;">强</span>
+            <img src="/picloud/static/img/legend1.png" alt="" style="width:120px;height:20px;">
+            <span style="font-size:12px;margin-left:8px;">弱</span>
+        </div>
+    </div>
+    <span style="position:absolute;top:270px;left:50%;margin-left:-210px;display:inline-block;text-align:center;font-size:12px;color:#999;line-height:1.5;">数字为风场格点<br/>附近空气监测站数量</span>
+    <div id="plot31"></div>
+    <div id="plot32"></div>
+    <span class="info" style="color:rgba(80, 163, 186, 1);position:absolute;left:410px;bottom:300px;font-size:12px;display:none;">风力</span>
+    <span class="info" style="color:rgba(175, 187, 72, 1);position:absolute;left:410px;bottom:110px;font-size:12px;display:none;">风向</span>
+    <span id="plot3_date"></span>
+</div>
+<div id="plot4">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+            <div style="text-align:center;">
+                <embed src='http://player.youku.com/player.php/sid/XMTcxNjE2MzM5Mg==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+            <div style="height:400px;position:relative;">
+                <h3 style="text-align:center;margin-bottom:40px;padding-top:10px;margin-top:0;">从四面八方 迎来更多的 <span style="color:#d94e5d;">风</span></h3>
+                <div id="plot41">
+                    <p style="font-size:12px;color:#999;text-align:center;">将<span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">33</span>个 风场格点</p>
+                    <p style="font-size:12px;color:#999;text-align:center;">和附近的 空气监测站 <span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">进行匹配</span></p>
+                    <p style="font-size:12px;color:#999;text-align:center;margin-top:35px;"><span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">101</span>对 站点匹配 <span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">1036</span>次 风力匹配 中</p>
+                    <p style="font-size:12px;color:#999;text-align:center;margin-top:35px;">风 共改善了 空气质量</p>
+                    <p style="font-size:12px;color:#999;text-align:center;"><span style="margin-right:10px;"><span style="font-size:24px;color:#d94e5d;margin-left:5px;margin-right:5px;">561</span>次</span>占<span style="font-size:16px;color:#88b089;margin-left:5px;margin-right:5px;">54.15%</span></p>
+                    <p style="font-size:12px;color:#999;text-align:center;margin-top:35px;">平均降低 AQI 至</p>
+                    <p style="font-size:12px;color:#999;text-align:center;"><span style="font-size:24px;color:#d94e5d;margin-left:5px;margin-right:5px;">62.36%</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div id="footer">
+        <p>Copyright <span class="fa fa-fw fa-copyright"></span> 上海交通大学 <a href="http://zhanghonglun.cn/" target="_blank">张宏伦</a><br/> <span style="font-size:13px;">数据可视化作品</span></p>
+    </div>
+</body>
+
+</html>
